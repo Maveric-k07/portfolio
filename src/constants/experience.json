@@ -1,0 +1,59 @@
+[
+  {
+    "company": "Amikus AI",
+    "summary": "Revolutionizing legal contract review and drafting with AI",
+    "roles": [
+      "Developed serverless, microservices-based backends for multiple iterations of the FastAPI and Golang-based MVP application on AWS.",
+      "Deployed serverless inference APIs for BERT, T5, and GPT-based classification, text extraction, and text generation models on AWS and GCP",
+      "Spearheaded the development of an innovative AI-powered system for streamlining legal contract review and drafting processes",
+      "Implemented support for \"Agentic Behaviour\" that can handle query routing to many agents that have been assigned specific tasks",
+      "Designed and implemented a cutting-edge RAG system, leveraging subquestion-generation and vector store retrieval to significantly enhance LLM query augmentation",
+      "Contributed to fine-tuning GPT-3 for specialized use cases and explored fine-tuning of open-source models",
+      "Deployed scalable and automated data scraping framework on GCP using Cloud Run, Cloud Tasks, Selenium Web Driver for building training data. Scraped over 30k webpages and collected over 45k datapoints.",
+      "Currently expanding the system's capabilities to handle multi-file parsing and integration with various cloud storage services",
+      "Tech stack: Golang, FastAPI (python), AWS (Lambda, S3, EC2, Fargate, Cognito, SNS, SQS, API Gateway), Docker, and PGVector"
+    ],
+    "link": "https://www.linkedin.com/company/amikus-ai",
+    "location": "Remote",
+    "duration": "2 years",
+    "type": "Internship (2022 to 2023) to Full-time (2023 to present)",
+    "logo": "https://g2r9mjstjxlrpsq0.public.blob.vercel-storage.com/amikus_ai_logo-1Sa5ehozYMXP74Xzwj8GdJHsJfDLMz.jpeg",
+    "duration_months": "June 2022 - Present"
+  },
+  {
+    "company": "KriyaFit",
+    "summary": "Enhancing e-commerce with AI-driven product recommendations",
+    "roles": [
+      "Developed an LLM powered chatbot for personalized product recommendations and sports/health/fitness Q&A for a Shopify store with 10k+ products",
+      "Engineered a robust data scrape and ingest pipeline for Shopify product ingestion, leveraging GCP Cloud SQL, Cloud Functions, Shopify WebHooks and PGVector",
+      "Created an innovative consultation flow for personalized product package recommendations based on user surveys",
+      "Designed intuitive dashboards for non-technical team members to analyze user-chatbot interactions",
+      "Tech stack: FastAPI (python), Docker, GCP, and PGVector"
+    ],
+    "link": "https://kriya.fit/",
+    "location": "Remote",
+    "duration": "11 months",
+    "type": "Freelance Contract",
+    "logo": "https://g2r9mjstjxlrpsq0.public.blob.vercel-storage.com/kf-WVmUeO1CKbYJ1WKHR5gx1E9nUsLWDS.png",
+    "duration_months": "Sept 2023 - Present"
+  },
+  {
+    "company": "being.app",
+    "summary": "Transforming mental health support with AI and graph databases",
+    "roles": [
+      "Led the development of AI-powered features, leveraging GPT and Being's extensive mental health data mapped in a graph structure",
+      "Implemented a sophisticated system for providing personalized insights into user discomforts, based on multi-level analysis of mental health issues",
+      "Optimized Neo4j queries to extract highly relevant information for personalized user experiences",
+      "Developed an AI-driven recommendation system for 'mini-therapies' and personalized journaling prompts",
+      "Created efficient automations for the science team's data gathering and classification processes using Notion",
+      "Tech Crunch participation showcasing many AI features implemented by me. https://techcrunch.com/2023/09/28/meet-being-app-wants-help-users-map-out-address-mental-health-concerns/",
+      "Tech stack: FastAPI (python), NodeJS, Docker, GCP, Neo4J, Firebase, Langchain, and Pinecone"
+    ],
+    "link": "https://being.app/",
+    "location": "Remote",
+    "duration": "3 months",
+    "type": "Freelance Internship",
+    "logo": "https://g2r9mjstjxlrpsq0.public.blob.vercel-storage.com/being-modified-15xRuuE7HkxmjUIqDJL2qdrbqRtmER.png",
+    "duration_months": "April 2023 - June 2023"
+  }
+]

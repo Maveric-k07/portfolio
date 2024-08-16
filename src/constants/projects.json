@@ -1,0 +1,56 @@
+{
+  "completedProjects": [
+    {
+      "title": "WildLife Conservation",
+      "description": [
+        "Led a team that built a WildLife Conservation system aimed at providing support to wildlife sanctuaries combat poaching. This was done as part of a 36-hour National Hackathon at Marwadi University, where we landed the 1st place.",
+        "Developed a pipeline of YOLO powered object detection models for Animal-Person detection, followed by Poacher-Employee detection and finally Prey-Predator detection using animal species classification. This was wrapped with a FastAPI application with MongoDB and JWT auth.",
+        "Technologies: FastAPI, HTML/CSS, MongoDB"
+      ],
+      "githubLink": "https://github.com/Maveric-k07/Wildlife-Conservation"
+    },
+    {
+      "title": "UtilGrabs",
+      "description": [
+        "Led a team that built a community platform using Django, HTML/CSS, and SQLite to incentivize low energy consumption on an individual level, as part of a 10-hour Hackathon project where we landed the 1st place.",
+        "Developed a competitive platform for friends and peer groups to participate in energy conservation competitions with rewards and incentives for top performers, having the least energy consumption. Measuring the energy consumption by comparing electricity, water, gas bills and track the health bands like FitBit.",
+        "Technologies: Django, HTML/CSS, SQLite"
+      ],
+      "githubLink": "https://github.com/Maveric-k07/UtilGrabs"
+    },
+    {
+      "title": "Vecky",
+      "description": [
+        "Vecky is a lightweight vector database that leverages PostgreSQL and the pgvector extension to efficiently store and manage embeddings, enabling advanced similarity search operations.",
+        "It supports multiple embedding models, including Sentence Transformer and OpenAI’s Embedding Model, offering flexibility for various NLP tasks. Vecky provides a flexible API for managing collections, adding documents, performing similarity searches using Euclidean distance and cosine similarity, and accessing collection statistics.",
+        "Technologies : Docker, Python, PostgreSQL, Sentence Transformer"
+      ],
+      "githubLink": "https://github.com/Maveric-k07/vecky"
+    }    
+  ],
+  "wipProjects": [
+    {
+      "title": "Agentic Chatbot for Shopify",
+      "description": [
+        "An open-source tool that integrates an **Agentic Chatbot** for your Shopify site seamlessly for:",
+        "  Product recommendation",
+        "  Agentic behaviors for product help/return/replace queries",
+        "  Navigation across a large variety of products",
+        "  Integration of payment gateways",
+        "GitHub: **Work in progress**"
+      ]
+    },
+    {
+      "title": "LangPORT",
+      "description": [
+        "**LangPORT** a system for understanding and navigating through large legacy COBOL code bases and also has agentic-behavior for multiple tasks:",
+        "  Creating Documentation",
+        "  Code Generation matching the preferences and styles in the repo",
+        "  Search and summarize features/APIs",
+        "  Navigation through large number of files to find a specific part of the code",
+        "  Code translation",
+        "GitHub: **Work in progress**"
+      ]
+    }
+  ]
+}
