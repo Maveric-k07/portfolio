@@ -1,0 +1,18 @@
+.home {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+    color: white;
+    min-height: 90vh;
+}
+
+.tagContainer {
+    width: 40%;
+    height: 80vh;
+}
+
+@media (max-width: 768px) {
+    .tagContainer {
+        display: none;
+    }
+}

@@ -1,7 +1,68 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { Container, Spinner } from 'react-bootstrap';
-import ReactMarkdown from 'react-markdown';
+import styled from 'styled-components';
+
+const BlogContainer = styled(Container)`
+  background-color: white;
+  color: black;
+  min-height: 100vh;
+  padding: 15px;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+
+  @media (min-width: 768px) {
+    padding: 40px;
+    max-width: 800px;
+  }
+`;
+
+const BlogTitle = styled.h1`
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  word-wrap: break-word;
+
+  @media (min-width: 768px) {
+    font-size: 2rem;
+  }
+`;
+
+const BlogDate = styled.p`
+  margin-bottom: 1rem;
+`;
+
+const BlogContent = styled.div`
+  font-size: 1rem;
+  line-height: 1.6;
+  word-wrap: break-word;
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  p, h2, h3, h4, h5, h6 {
+    max-width: 100%;
+    overflow-wrap: break-word;
+  }
+`;
+
+const LoadingContainer = styled(Container)`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+`;
+
+const ErrorContainer = styled(Container)`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+  text-align: center;
+`;
 
 const BlogPost = () => {
   const { id } = useParams();
@@ -38,35 +99,35 @@ const BlogPost = () => {
 
   if (loading) {
     return (
-      <Container className="d-flex justify-content-center align-items-center" style={{ minHeight: '100vh' }}>
+      <LoadingContainer>
         <Spinner animation="border" variant="dark" />
         <span className="ml-2">Loading blog post...</span>
-      </Container>
+      </LoadingContainer>
     );
   }
 
   if (error) {
     return (
-      <Container style={{ backgroundColor: 'white', color: 'black', minHeight: '100vh', padding: '40px' }}>
-        <p className="text-center">{error}</p>
-      </Container>
+      <ErrorContainer>
+        <p>{error}</p>
+      </ErrorContainer>
     );
   }
 
   if (!post) {
     return (
-      <Container style={{ backgroundColor: 'white', color: 'black', minHeight: '100vh', padding: '40px' }}>
-        <p className="text-center">Blog post not found.</p>
-      </Container>
+      <ErrorContainer>
+        <p>Blog post not found.</p>
+      </ErrorContainer>
     );
   }
 
   return (
-    <Container className="blog-post" style={{ backgroundColor: 'white', color: 'black', minHeight: '100vh', padding: '40px', maxWidth: '800px' }}>
-      <h1>{post.title}</h1>
-      <p className="text-muted">{new Date(post.pubDate).toLocaleDateString()}</p>
-      <div dangerouslySetInnerHTML={{ __html: post.content }} />
-    </Container>
+    <BlogContainer>
+      <BlogTitle>{post.title}</BlogTitle>
+      <BlogDate className="text-muted">{new Date(post.pubDate).toLocaleDateString()}</BlogDate>
+      <BlogContent dangerouslySetInnerHTML={{ __html: post.content }} />
+    </BlogContainer>
   );
 };
 

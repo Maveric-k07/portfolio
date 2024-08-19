@@ -1,22 +1,17 @@
 import React from 'react';
 import Tag from './home/Tag';
 import ProfileInfo from './home/ProfileInfo';
-
+import MobilePopup from './home/Popup';
+import styles from './Home.module.css';
 
 const Home = () => {
   return (
-    <div className="home" style={{ 
-      display: 'flex', 
-      justifyContent: 'space-between', 
-      padding: '0 20px',
-      color: 'white',
-      minHeight: '90vh'
-    }}>
-      
+    <div className={styles.home}>
       <ProfileInfo />
-      <div style={{ width: '40%', height: '80vh' }}>
+      <div className={styles.tagContainer}>
         <Tag />
       </div>
+      <MobilePopup />
     </div>
   );
 };

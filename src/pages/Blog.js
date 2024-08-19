@@ -33,9 +33,65 @@ const Blog = () => {
       });
   }, []);
 
+  const containerStyle = {
+    backgroundColor: 'white',
+    color: 'black',
+    minHeight: '100vh',
+    padding: '20px',
+    maxWidth: '1200px',
+    margin: '0 auto',
+    '@media (minWidth: 768px)': {
+      padding: '40px'
+    }
+  };
+
+  const articleStyle = {
+    marginBottom: '20px',
+    padding: '20px',
+    borderBottom: '1px solid #ddd',
+    '@media (minWidth: 768px)': {
+      padding: '50px'
+    }
+  };
+
+  const flexContainerStyle = {
+    display: 'flex',
+    flexDirection: 'column',
+    '@media (minWidth: 768px)': {
+      flexDirection: 'row',
+      justifyContent: 'space-between',
+      alignItems: 'flex-start'
+    }
+  };
+
+  const dateStyle = {
+    color: '#666',
+    marginBottom: '10px',
+    '@media (minWidth: 768px)': {
+      flexBasis: '30%',
+      marginBottom: '0'
+    }
+  };
+
+  const contentStyle = {
+    '@media (minWidth: 768px)': {
+      flexBasis: '70%'
+    }
+  };
+
+  const titleStyle = {
+    color: 'black',
+    textDecoration: 'none',
+    fontFamily: 'Times New Roman, serif',
+    fontSize: 'calc(1.2rem + 0.5vw)',
+    '@media (minWidth: 768px)': {
+      fontSize: '25px'
+    }
+  };
+
   if (loading) {
     return (
-      <div className="text-center" style={{ backgroundColor: 'white', color: 'black', minHeight: '100vh', padding: '40px 160px' }}>
+      <div className="text-center" style={containerStyle}>
         <Spinner animation="border" variant="dark" />
         <p>Loading blogs...</p>
       </div>
@@ -44,38 +100,33 @@ const Blog = () => {
 
   if (!articles.length) {
     return (
-      <div className="text-center" style={{ backgroundColor: 'white', color: 'black', minHeight: '100vh', padding: '40px 160px' }}>
+      <div className="text-center" style={containerStyle}>
         <p>No blog posts available at the moment. Please check back later.</p>
       </div>
     );
   }
 
   return (
-    <div style={{ backgroundColor: 'white', color: 'black', minHeight: '100vh', padding: '40px 160px' }}>
+    <div style={containerStyle}>
       <ListGroup variant="flush">
         {articles.map((article, index) => (
-          <div key={index} style={{ marginBottom: '20px', padding: '50px', borderBottom: '1px solid #ddd' }}>
-            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
-              <div style={{ flexBasis: '30%', color: '#666' }}>
+          <div key={index} style={articleStyle}>
+            <div style={flexContainerStyle}>
+              <div style={dateStyle}>
                 <small>{moment(article.pubDate).format('MMMM Do, YYYY')}</small>
               </div>
-              <div style={{ flexBasis: '70%' }}>
+              <div style={contentStyle}>
                 <h5 className="text-dark">
                   <Link
                     to={`/blog/${getBlogPostId(article.guid)}`} 
-                    style={{ 
-                      color: 'black', 
-                      textDecoration: 'none', 
-                      fontFamily: 'Times New Roman, serif',
-                      fontSize: "25px"
-                    }}
+                    style={titleStyle}
                     onMouseEnter={(e) => e.target.style.textDecoration = 'underline'}
                     onMouseLeave={(e) => e.target.style.textDecoration = 'none'}
                   >
                     {article.title}
                   </Link>
                 </h5>
-                <p className="text-dark mt-2">
+                <p className="text-dark mt-2" style={{ fontSize: 'calc(0.9rem + 0.1vw)' }}>
                   {extractFirstParagraphText(article.description).length > 500 ? extractFirstParagraphText(article.description).substring(0, 500) + '...' : extractFirstParagraphText(article.description)}
                 </p>
               </div>
