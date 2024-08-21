@@ -46,6 +46,33 @@ const BlogContent = styled.div`
     max-width: 100%;
     overflow-wrap: break-word;
   }
+
+  p {
+    margin-bottom: 15px;
+  }
+  
+  h2 {
+    font-size: 1.5rem;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    color: #000;
+  }
+
+  pre {
+    background-color: #f4f4f4;
+    padding: 15px;
+    border-radius: 5px;
+    overflow-x: auto;
+  }
+
+  code {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.9rem;
+    background-color: #f4f4f4; /* Adjust this color to make the background darker */
+    padding: 2px 4px; /* Optional: Adds some padding around the code */
+    border-radius: 4px; /* Optional: Adds rounded corners */
+}
+
 `;
 
 const LoadingContainer = styled(Container)`
